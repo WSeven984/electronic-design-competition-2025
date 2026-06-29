@@ -1,0 +1,51 @@
+	component mysystem is
+		port (
+			btn_export           : in    std_logic_vector(1 downto 0)  := (others => 'X'); -- export
+			clk_clk              : in    std_logic                     := 'X';             -- clk
+			clk20m_clk           : out   std_logic;                                        -- clk
+			epcs_dclk            : out   std_logic;                                        -- dclk
+			epcs_sce             : out   std_logic;                                        -- sce
+			epcs_sdo             : out   std_logic;                                        -- sdo
+			epcs_data0           : in    std_logic                     := 'X';             -- data0
+			filter_addr_export   : out   std_logic_vector(4 downto 0);                     -- export
+			filter_data_export   : out   std_logic_vector(9 downto 0);                     -- export
+			filter_work_export   : out   std_logic;                                        -- export
+			filter_write_export  : out   std_logic;                                        -- export
+			ir_decoder_clk100k   : out   std_logic;                                        -- clk100k
+			ir_decoder_decode_ok : out   std_logic;                                        -- decode_ok
+			ir_decoder_decoding  : out   std_logic;                                        -- decoding
+			ir_decoder_error     : out   std_logic;                                        -- error
+			ir_decoder_ir_data   : out   std_logic_vector(7 downto 0);                     -- ir_data
+			ir_decoder_ir_addrh  : out   std_logic_vector(7 downto 0);                     -- ir_addrh
+			ir_decoder_ir_addrl  : out   std_logic_vector(7 downto 0);                     -- ir_addrl
+			ir_decoder_ir_in     : in    std_logic                     := 'X';             -- ir_in
+			ir_decoder_ir_out    : out   std_logic_vector(31 downto 0);                    -- ir_out
+			lcd_wr_n             : out   std_logic;                                        -- wr_n
+			lcd_rd_n             : out   std_logic;                                        -- rd_n
+			lcd_data             : inout std_logic_vector(15 downto 0) := (others => 'X'); -- data
+			lcd_rs               : out   std_logic;                                        -- rs
+			lcd_cs_n             : out   std_logic;                                        -- cs_n
+			lcd_bl_export        : out   std_logic;                                        -- export
+			lcd_rst_export       : out   std_logic;                                        -- export
+			meiled_export        : out   std_logic_vector(7 downto 0);                     -- export
+			meisw_export         : in    std_logic_vector(7 downto 0)  := (others => 'X'); -- export
+			mul_export           : out   std_logic_vector(7 downto 0);                     -- export
+			pio0_inc_export      : out   std_logic_vector(31 downto 0);                    -- export
+			reset_reset_n        : in    std_logic                     := 'X';             -- reset_n
+			sdram_addr           : out   std_logic_vector(11 downto 0);                    -- addr
+			sdram_ba             : out   std_logic_vector(1 downto 0);                     -- ba
+			sdram_cas_n          : out   std_logic;                                        -- cas_n
+			sdram_cke            : out   std_logic;                                        -- cke
+			sdram_cs_n           : out   std_logic;                                        -- cs_n
+			sdram_dq             : inout std_logic_vector(15 downto 0) := (others => 'X'); -- dq
+			sdram_dqm            : out   std_logic_vector(1 downto 0);                     -- dqm
+			sdram_ras_n          : out   std_logic;                                        -- ras_n
+			sdram_we_n           : out   std_logic;                                        -- we_n
+			sdram_clk_clk        : out   std_logic;                                        -- clk
+			uart_0_rxd           : in    std_logic                     := 'X';             -- rxd
+			uart_0_txd           : out   std_logic;                                        -- txd
+			vpp_adc0_export      : in    std_logic_vector(7 downto 0)  := (others => 'X'); -- export
+			vpp_adc1_export      : in    std_logic_vector(7 downto 0)  := (others => 'X')  -- export
+		);
+	end component mysystem;
+

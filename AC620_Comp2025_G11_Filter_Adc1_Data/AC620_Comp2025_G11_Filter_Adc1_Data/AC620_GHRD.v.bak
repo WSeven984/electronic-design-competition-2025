@@ -1,0 +1,56 @@
+module AC620_GHRD(
+	input  wire        clk,                           //                        clk.clk
+	input  wire        reset_n,                     //                      reset.reset_n
+	output wire        spi_clk,                    //                    spi_clk.export
+	output wire        spi_cs,                     //                     spi_cs.export
+	output wire        spi_di,                     //                     spi_di.export
+	input  wire        spi_do,                     //                     spi_do.export
+	output wire        lcd_rst,                    //                    lcd_rst.export
+	output wire        lcd_rd_n,                     //                     lcd_rd.export
+	output wire        lcd_bl,                     //                     lcd_bl.export
+	output wire        lcd_wr_n,                     //                     lcd_wr.export
+	output wire        lcd_rs,                     //                     lcd_rs.export
+	output wire        lcd_cs_n,                     //                     lcd_cs.export
+	inout  wire [15:0] lcd_data,                     //                     lcd_db.export
+	output wire        sdram_clk,                     //                  sdram_clk.clk
+	output wire [11:0] sdram_addr,                        //                      sdram.addr
+	output wire [1:0]  sdram_ba,                          //                           .ba
+	output wire        sdram_cas_n,                       //                           .cas_n
+	output wire        sdram_cke,                         //                           .cke
+	output wire        sdram_cs_n,                        //                           .cs_n
+	inout  wire [15:0] sdram_dq,                          //                           .dq
+	output wire [1:0]  sdram_dqm,                         //                           .dqm
+	output wire        sdram_ras_n,                       //                           .ras_n
+	output wire        sdram_we_n                         //                           .we_n
+);
+
+    mysystem u0 (
+		.clk_clk                           (clk),                           //                        clk.clk
+		.reset_reset_n                     (reset_n),                     //                      reset.reset_n
+		.spi_clk_export                    (spi_clk),                    //                    spi_clk.export
+		.spi_cs_export                     (spi_cs),                     //                     spi_cs.export
+		.spi_di_export                     (spi_di),                     //                     spi_di.export
+		.spi_do_export                     (spi_do),                     //                     spi_do.export
+		.lcd_rst_export                    (lcd_rst),                    //                    lcd_rst.export
+		.lcd_bl_export                     (lcd_bl),                     //                     lcd_bl.export
+		.lcd_wr_n                          (lcd_wr_n),                          //                        lcd.wr_n
+		.lcd_rd_n                          (lcd_rd_n),                          //                           .rd_n
+		.lcd_data                          (lcd_data),                          //                           .data
+		.lcd_rs                            (lcd_rs),                            //                           .rs
+		.lcd_cs_n                          (lcd_cs_n),                           //  
+		.sdram_clk_clk                     (sdram_clk),                     //                  sdram_clk.clk
+		.altpll_0_phasedone_conduit_export (), // altpll_0_phasedone_conduit.export
+		.altpll_0_locked_conduit_export    (),    //    altpll_0_locked_conduit.export
+		.altpll_0_areset_conduit_export    (),    //    altpll_0_areset_conduit.export
+		.sdram_addr                        (sdram_addr),                        //                      sdram.addr
+		.sdram_ba                          (sdram_ba),                          //                           .ba
+		.sdram_cas_n                       (sdram_cas_n),                       //                           .cas_n
+		.sdram_cke                         (sdram_cke),                         //                           .cke
+		.sdram_cs_n                        (sdram_cs_n),                        //                           .cs_n
+		.sdram_dq                          (sdram_dq),                          //                           .dq
+		.sdram_dqm                         (sdram_dqm),                         //                           .dqm
+		.sdram_ras_n                       (sdram_ras_n),                       //                           .ras_n
+		.sdram_we_n                        (sdram_we_n)                         //                           .we_n
+	);
+
+endmodule

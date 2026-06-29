@@ -1,0 +1,53 @@
+# Large/generated FPGA artifacts
+*.stp
+*.sof
+*.pof
+*.jic
+*.rbf
+*.rpt
+*.summary
+*.smsg
+*.qmsg
+*.pin
+*.fit
+*.sta
+*.flow
+*.map
+*.tan
+*.done
+*.pdom
+db/
+incremental_db/
+output_files/
+simulation/
+.metadata/
+.qsys_edit/
+
+# Build outputs
+build/
+Debug/
+Release/
+Objects/
+Listings/
+obj/
+*.o
+*.d
+*.elf
+*.hex
+*.bin
+*.axf
+*.map
+*.lst
+*.crf
+*.htm
+*.dep
+
+# Editor/system noise
+.vscode/
+.idea/
+Thumbs.db
+Desktop.ini
+~$*
+
+# Personal resume draft kept local
+简历项目表述.md
